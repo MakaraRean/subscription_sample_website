@@ -298,6 +298,7 @@
     }
 </style>
 <script src="https://js.stripe.com/v3/"></script>
+<script src="js/subscription.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/menu.css">
 <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -316,38 +317,12 @@
                 <button class="button" type="submit">Manage Customer Portal</button>
             </form>
             <br> -->
-            <div class="planItem__container">
-                <!--free plan starts -->
-                <div class="planItem planItem--free">
-
-                    <div class="card">
-                        <div class="card__header">
-                            <div class="card__icon symbol symbol--rounded"></div>
-                            <h2>Basic Plan</h2>
-                        </div>
-                        <div class="card__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</div>
-                    </div>
-
-                    <div class="price">$10<span>/ month</span></div>
-
-                    <ul class="featureList">
-                        <li>2 links</li>
-                        <li>Own analytics platform</li>
-                        <li class="disabled">Chat support</li>
-                        <li class="disabled">Mobile application</li>
-                        <li class="disabled">Unlimited users</li>
-                        <li class="disabled">Customize Panel</li>
-                    </ul>
-                    <form action="/create-checkout-session" method="POST">
-                        <!-- Add a hidden field with the lookup_key of your Price -->
-                        <input type="hidden" name="lookup_key" value="basic_monthly" />
-                        <button class="button" id="checkout-and-portal-button" type="submit">Subscribe</button>
-                      </form>
-                </div>
+            <div class="planItem__container" id="planItem__container">
+                
                 <!--free plan ends -->
 
-                <!--pro plan starts -->
-                <div class="planItem planItem--pro">
+                <!-- pro plan starts -->
+                <!-- <div class="planItem planItem--pro">
                     <div class="card">
                         <div class="card__header">
                             <div class="card__icon symbol"></div>
@@ -368,16 +343,14 @@
                         <li class="disabled">Customize Panel</li>
                     </ul>
                     <form action="/create-checkout-session" method="POST">
-                        <!-- Add a hidden field with the lookup_key of your Price -->
                         <input type="hidden" name="lookup_key" value="pro_monthly" />
                         <button class="button" id="checkout-and-portal-button" type="submit">Subscribe</button>
                     </form>
-<!--                    <button class="button button&#45;&#45;pink">Subscirbe</button>-->
-                </div>
+                </div> -->
                 <!--pro plan ends -->
 
                 <!--entp plan starts -->
-                <div class="planItem planItem--entp">
+                <!-- <div class="planItem planItem--entp">
                     <div class="card">
                         <div class="card__header">
                             <div class="card__icon"></div>
@@ -397,12 +370,10 @@
                         <li>Customize Panel</li>
                     </ul>
                     <form action="/create-checkout-session" method="POST">
-                        <!-- Add a hidden field with the lookup_key of your Price -->
                         <input type="hidden" name="lookup_key" value="ultimate_monthly" />
                         <button class="button" id="checkout-and-portal-button" type="submit">Subscribe</button>
                     </form>
-<!--                    <button class="button button&#45;&#45;white">Subscribe</button>-->
-                </div>
+                </div> -->
                 <!--entp plan ends -->
 
             </div>
